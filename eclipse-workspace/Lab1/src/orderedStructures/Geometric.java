@@ -20,5 +20,12 @@ public class Geometric extends Progression {
 	public String toString(){
 		return "Geom(" + (int) this.firstValue() + "," + (int) commonFactor + ")";	
 	}
+	
+	@Override
+	public double getTerm(int n) throws IndexOutOfBoundsException { 
+		if (n <= 0) 
+			throw new IndexOutOfBoundsException("printAllTerms: Invalid argument value = " + n); 		
+				return this.firstValue()*Math.pow(commonFactor, n-1);
+	}
 
 }
