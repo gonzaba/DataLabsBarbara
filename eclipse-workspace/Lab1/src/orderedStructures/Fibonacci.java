@@ -14,7 +14,6 @@ public class Fibonacci extends Progression {
 
 	@Override
 	public double nextValue() {
-        // add the necessary code here
 		double number = current + prev;
 		prev= current;
 		current = number;
